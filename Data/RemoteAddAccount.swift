@@ -9,14 +9,22 @@
 import Foundation
 import Domain
 
-public struct RemoteAddAccount: AddAccount {
+public final class RemoteAddAccount: AddAccount {
     
-    fileprivate let url:URL
-    fileprivate let httpPostClient:HttpPostCliente
+    private let url:URL
+    private let httpPostClient:HttpPostClient
+    
+    public init(url:URL, httpPostClient:HttpPostClient) {
+        self.url = url
+        self.httpPostClient = httpPostClient
+    }
     
     public func add(addAccountModel:AddAccountModel, completion:@escaping(Result<AccountModel,DomainError>)->Void) {
         
-        httpPostClient.post(to: url, with: addAccountModel.toData()) { result in
+        httpPostClient.post(to: url, with: addAccountModel.toData()) { [weak self] result in
+            
+            //se aconteceu o deinit o programa n precisa executar a clouser pois o usuario ja saiu da aplicacao
+            guard self != nil else {return}
             
             switch result {
             case .success(let data):
