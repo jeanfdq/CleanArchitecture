@@ -4,7 +4,7 @@
 //
 //  Created by Jean Paull on 19/06/20.
 //  Copyright © 2020 Jean Paull. All rights reserved.
-//
+
 
 import Foundation
 import Domain
@@ -28,13 +28,18 @@ public final class RemoteAddAccount: AddAccount {
             
             switch result {
             case .success(let data):
+                
                 if let modelResponse:AccountModel = data?.toModel() {
+                    
                     completion(.success(modelResponse))
+                    
                 }else {
+                    
                     completion(.failure(.unexpected))
                 }
                 
             case .failure:
+                
                 completion(.failure(.unexpected))
                 
             }
