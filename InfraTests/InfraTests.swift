@@ -9,7 +9,7 @@
 import XCTest
 import Alamofire
 import Data
-import Infra
+@testable import Infra
 
 class AlamofireAdapterTeste: XCTestCase {
     
