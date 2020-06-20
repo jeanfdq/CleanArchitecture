@@ -1,15 +1,15 @@
 //
-//  DataTests.swift
-//  DataTests
+//  UITests.swift
+//  UITests
 //
-//  Created by Jean Paull on 19/06/20.
+//  Created by Jean Paull on 20/06/20.
 //  Copyright © 2020 Jean Paull. All rights reserved.
 //
 
 import XCTest
-import Data
+@testable import UI
 
-class DataTests: XCTestCase {
+class UITests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -22,7 +22,6 @@ class DataTests: XCTestCase {
     func testExample() throws {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
-        
     }
 
     func testPerformanceExample() throws {
