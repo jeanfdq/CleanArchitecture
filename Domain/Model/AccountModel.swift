@@ -9,7 +9,13 @@
 import Foundation
 
 public struct AccountModel:Codable, Equatable {
-    let id:String
-    let name:String
-    let email:String
+    public let id:String
+    public let name:String
+    public let email:String
+    
+    public init(id:String, name:String, email:String, password:String) {
+        self.id                     = id
+        self.name                   = name
+        self.email                  = email
+    }
 }

@@ -10,6 +10,8 @@
 		A9912BCF249DADB900AB3204 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9E75753249D242300D339C4 /* Data.framework */; };
 		A9912BD1249DBCC000AB3204 /* AlamofireAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9912BD0249DBCC000AB3204 /* AlamofireAdapter.swift */; };
 		A9912BD3249DBE8400AB3204 /* UrlProtocolStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9912BD2249DBE8400AB3204 /* UrlProtocolStub.swift */; };
+		A9912BDC249DCA9600AB3204 /* IntegrationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9912BDB249DCA9600AB3204 /* IntegrationTest.swift */; };
+		A9912BDE249DCA9600AB3204 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9E7573F249D209800D339C4 /* Domain.framework */; };
 		A9E75748249D211600D339C4 /* AddAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E75747249D211600D339C4 /* AddAccount.swift */; };
 		A9E7574B249D234300D339C4 /* AccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E7574A249D234300D339C4 /* AccountModel.swift */; };
 		A9E7574D249D236B00D339C4 /* AddAccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E7574C249D236B00D339C4 /* AddAccountModel.swift */; };
@@ -31,6 +33,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		A9912BDF249DCA9600AB3204 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A9E7571B249D1F4B00D339C4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A9E7573E249D209800D339C4;
+			remoteInfo = Domain;
+		};
+		A9912BE4249DCAAE00AB3204 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A9E7571B249D1F4B00D339C4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A9E75752249D242300D339C4;
+			remoteInfo = Data;
+		};
+		A9912BE6249DCAAE00AB3204 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A9E7571B249D1F4B00D339C4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A9E75785249D930600D339C4;
+			remoteInfo = Infra;
+		};
 		A9E7575D249D242300D339C4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A9E7571B249D1F4B00D339C4 /* Project object */;
@@ -71,6 +94,9 @@
 /* Begin PBXFileReference section */
 		A9912BD0249DBCC000AB3204 /* AlamofireAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireAdapter.swift; sourceTree = "<group>"; };
 		A9912BD2249DBE8400AB3204 /* UrlProtocolStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlProtocolStub.swift; sourceTree = "<group>"; };
+		A9912BD9249DCA9600AB3204 /* IntegrationTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IntegrationTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9912BDB249DCA9600AB3204 /* IntegrationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegrationTest.swift; sourceTree = "<group>"; };
+		A9912BDD249DCA9600AB3204 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9E7573F249D209800D339C4 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9E75742249D209800D339C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9E75747249D211600D339C4 /* AddAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAccount.swift; sourceTree = "<group>"; };
@@ -96,6 +122,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		A9912BD6249DCA9600AB3204 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9912BDE249DCA9600AB3204 /* Domain.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A9E7573C249D209800D339C4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -148,6 +182,15 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		A9912BDA249DCA9600AB3204 /* IntegrationTest */ = {
+			isa = PBXGroup;
+			children = (
+				A9912BDB249DCA9600AB3204 /* IntegrationTest.swift */,
+				A9912BDD249DCA9600AB3204 /* Info.plist */,
+			);
+			path = IntegrationTest;
+			sourceTree = "<group>";
+		};
 		A9E7571A249D1F4B00D339C4 = {
 			isa = PBXGroup;
 			children = (
@@ -156,6 +199,7 @@
 				A9E7575F249D242300D339C4 /* DataTests */,
 				A9E75787249D930600D339C4 /* Infra */,
 				A9E75792249D930600D339C4 /* InfraTests */,
+				A9912BDA249DCA9600AB3204 /* IntegrationTest */,
 				A9E75724249D1F4B00D339C4 /* Products */,
 				A9E7576A249D244500D339C4 /* Frameworks */,
 			);
@@ -169,6 +213,7 @@
 				A9E7575B249D242300D339C4 /* DataTests.xctest */,
 				A9E75786249D930600D339C4 /* Infra.framework */,
 				A9E7578E249D930600D339C4 /* InfraTests.xctest */,
+				A9912BD9249DCA9600AB3204 /* IntegrationTest.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -308,6 +353,26 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		A9912BD8249DCA9600AB3204 /* IntegrationTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A9912BE1249DCA9600AB3204 /* Build configuration list for PBXNativeTarget "IntegrationTest" */;
+			buildPhases = (
+				A9912BD5249DCA9600AB3204 /* Sources */,
+				A9912BD6249DCA9600AB3204 /* Frameworks */,
+				A9912BD7249DCA9600AB3204 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A9912BE5249DCAAE00AB3204 /* PBXTargetDependency */,
+				A9912BE0249DCA9600AB3204 /* PBXTargetDependency */,
+				A9912BE7249DCAAE00AB3204 /* PBXTargetDependency */,
+			);
+			name = IntegrationTest;
+			productName = IntegrationTest;
+			productReference = A9912BD9249DCA9600AB3204 /* IntegrationTest.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		A9E7573E249D209800D339C4 /* Domain */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A9E75744249D209800D339C4 /* Build configuration list for PBXNativeTarget "Domain" */;
@@ -413,6 +478,9 @@
 				LastUpgradeCheck = 1150;
 				ORGANIZATIONNAME = "Jean Paull";
 				TargetAttributes = {
+					A9912BD8249DCA9600AB3204 = {
+						CreatedOnToolsVersion = 11.5;
+					};
 					A9E7573E249D209800D339C4 = {
 						CreatedOnToolsVersion = 11.5;
 						LastSwiftMigration = 1150;
@@ -454,11 +522,19 @@
 				A9E7575A249D242300D339C4 /* DataTests */,
 				A9E75785249D930600D339C4 /* Infra */,
 				A9E7578D249D930600D339C4 /* InfraTests */,
+				A9912BD8249DCA9600AB3204 /* IntegrationTest */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		A9912BD7249DCA9600AB3204 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A9E7573D249D209800D339C4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -497,6 +573,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		A9912BD5249DCA9600AB3204 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9912BDC249DCA9600AB3204 /* IntegrationTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A9E7573B249D209800D339C4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -550,6 +634,21 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		A9912BE0249DCA9600AB3204 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A9E7573E249D209800D339C4 /* Domain */;
+			targetProxy = A9912BDF249DCA9600AB3204 /* PBXContainerItemProxy */;
+		};
+		A9912BE5249DCAAE00AB3204 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A9E75752249D242300D339C4 /* Data */;
+			targetProxy = A9912BE4249DCAAE00AB3204 /* PBXContainerItemProxy */;
+		};
+		A9912BE7249DCAAE00AB3204 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A9E75785249D930600D339C4 /* Infra */;
+			targetProxy = A9912BE6249DCAAE00AB3204 /* PBXContainerItemProxy */;
+		};
 		A9E7575E249D242300D339C4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = A9E75752249D242300D339C4 /* Data */;
@@ -568,6 +667,44 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		A9912BE2249DCA9600AB3204 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = IntegrationTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = br.jean.IntegrationTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		A9912BE3249DCA9600AB3204 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = IntegrationTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = br.jean.IntegrationTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		A9E75735249D1F4C00D339C4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -942,6 +1079,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		A9912BE1249DCA9600AB3204 /* Build configuration list for PBXNativeTarget "IntegrationTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9912BE2249DCA9600AB3204 /* Debug */,
+				A9912BE3249DCA9600AB3204 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		A9E7571E249D1F4B00D339C4 /* Build configuration list for PBXProject "CleanArchitecture" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
