@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A9912BCF249DADB900AB3204 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9E75753249D242300D339C4 /* Data.framework */; };
+		A9912BD1249DBCC000AB3204 /* AlamofireAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9912BD0249DBCC000AB3204 /* AlamofireAdapter.swift */; };
+		A9912BD3249DBE8400AB3204 /* UrlProtocolStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9912BD2249DBE8400AB3204 /* UrlProtocolStub.swift */; };
 		A9E75748249D211600D339C4 /* AddAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E75747249D211600D339C4 /* AddAccount.swift */; };
 		A9E7574B249D234300D339C4 /* AccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E7574A249D234300D339C4 /* AccountModel.swift */; };
 		A9E7574D249D236B00D339C4 /* AddAccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E7574C249D236B00D339C4 /* AddAccountModel.swift */; };
@@ -23,6 +26,8 @@
 		A9E7578F249D930600D339C4 /* Infra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9E75786249D930600D339C4 /* Infra.framework */; };
 		A9E75794249D930600D339C4 /* InfraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E75793249D930600D339C4 /* InfraTests.swift */; };
 		A9E7579F249D948900D339C4 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = A9E7579E249D948900D339C4 /* Alamofire */; };
+		A9E757A2249DA23F00D339C4 /* TestFactories.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E757A1249DA23F00D339C4 /* TestFactories.swift */; };
+		A9E757A3249DA3B200D339C4 /* TestFactories.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E757A1249DA23F00D339C4 /* TestFactories.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +69,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A9912BD0249DBCC000AB3204 /* AlamofireAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireAdapter.swift; sourceTree = "<group>"; };
+		A9912BD2249DBE8400AB3204 /* UrlProtocolStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlProtocolStub.swift; sourceTree = "<group>"; };
 		A9E7573F249D209800D339C4 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9E75742249D209800D339C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9E75747249D211600D339C4 /* AddAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAccount.swift; sourceTree = "<group>"; };
@@ -85,6 +92,7 @@
 		A9E7578E249D930600D339C4 /* InfraTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InfraTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9E75793249D930600D339C4 /* InfraTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfraTests.swift; sourceTree = "<group>"; };
 		A9E75795249D930600D339C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A9E757A1249DA23F00D339C4 /* TestFactories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFactories.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +123,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9912BCF249DADB900AB3204 /* Data.framework in Frameworks */,
 				A9E7579F249D948900D339C4 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -130,6 +139,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A9912BCE249DACBB00AB3204 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A9E75776249D44BA00D339C4 /* ExtensionEncodable.swift */,
+				A9E7577F249D5B7300D339C4 /* ExtensionData.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		A9E7571A249D1F4B00D339C4 = {
 			isa = PBXGroup;
 			children = (
@@ -158,7 +176,6 @@
 		A9E75740249D209800D339C4 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				A9E75775249D44A400D339C4 /* Extension */,
 				A9E75749249D231600D339C4 /* Model */,
 				A9E7577A249D4E6400D339C4 /* Errors */,
 				A9E7577E249D54AC00D339C4 /* Protocols */,
@@ -179,6 +196,7 @@
 		A9E75754249D242300D339C4 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				A9912BCE249DACBB00AB3204 /* Extensions */,
 				A9E75770249D434000D339C4 /* Protocols */,
 				A9E7577D249D504400D339C4 /* Errors */,
 				A9E75773249D43D300D339C4 /* RemoteAddAccount.swift */,
@@ -190,6 +208,7 @@
 		A9E7575F249D242300D339C4 /* DataTests */ = {
 			isa = PBXGroup;
 			children = (
+				A9E757A0249DA21C00D339C4 /* Helpers */,
 				A9E75760249D242300D339C4 /* DataTests.swift */,
 				A9E75762249D242300D339C4 /* Info.plist */,
 			);
@@ -209,15 +228,6 @@
 				A9E75771249D436100D339C4 /* HttpPostClient.swift */,
 			);
 			path = Protocols;
-			sourceTree = "<group>";
-		};
-		A9E75775249D44A400D339C4 /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-				A9E75776249D44BA00D339C4 /* ExtensionEncodable.swift */,
-				A9E7577F249D5B7300D339C4 /* ExtensionData.swift */,
-			);
-			path = Extension;
 			sourceTree = "<group>";
 		};
 		A9E7577A249D4E6400D339C4 /* Errors */ = {
@@ -247,6 +257,8 @@
 		A9E75787249D930600D339C4 /* Infra */ = {
 			isa = PBXGroup;
 			children = (
+				A9912BD0249DBCC000AB3204 /* AlamofireAdapter.swift */,
+				A9912BD2249DBE8400AB3204 /* UrlProtocolStub.swift */,
 				A9E75789249D930600D339C4 /* Info.plist */,
 			);
 			path = Infra;
@@ -259,6 +271,14 @@
 				A9E75795249D930600D339C4 /* Info.plist */,
 			);
 			path = InfraTests;
+			sourceTree = "<group>";
+		};
+		A9E757A0249DA21C00D339C4 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A9E757A1249DA23F00D339C4 /* TestFactories.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -406,6 +426,7 @@
 					};
 					A9E75785249D930600D339C4 = {
 						CreatedOnToolsVersion = 11.5;
+						LastSwiftMigration = 1150;
 					};
 					A9E7578D249D930600D339C4 = {
 						CreatedOnToolsVersion = 11.5;
@@ -503,6 +524,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9E757A2249DA23F00D339C4 /* TestFactories.swift in Sources */,
 				A9E75761249D242300D339C4 /* DataTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -511,6 +533,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9912BD1249DBCC000AB3204 /* AlamofireAdapter.swift in Sources */,
+				A9912BD3249DBE8400AB3204 /* UrlProtocolStub.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -518,6 +542,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9E757A3249DA3B200D339C4 /* TestFactories.swift in Sources */,
 				A9E75794249D930600D339C4 /* InfraTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -818,6 +843,7 @@
 		A9E75798249D930600D339C4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -837,6 +863,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -846,6 +873,7 @@
 		A9E75799249D930600D339C4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -874,6 +902,7 @@
 		A9E7579B249D930600D339C4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = InfraTests/Info.plist;
@@ -893,6 +922,7 @@
 		A9E7579C249D930600D339C4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = InfraTests/Info.plist;

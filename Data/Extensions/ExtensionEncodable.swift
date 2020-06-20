@@ -8,8 +8,8 @@
 
 import Foundation
 
-extension Encodable {
-    public func toData() -> Data? {
+public extension Encodable {
+    func toData() -> Data? {
         return try? JSONEncoder().encode(self)
     }
 }
