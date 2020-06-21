@@ -22,6 +22,7 @@
 		A93F3DB4249EB48300FB9619 /* UI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A93F3DAB249EB48300FB9619 /* UI.framework */; };
 		A93F3DB9249EB48300FB9619 /* UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93F3DB8249EB48300FB9619 /* UITests.swift */; };
 		A93F3DC3249EB89400FB9619 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93F3DC2249EB89400FB9619 /* SignUpViewController.swift */; };
+		A98BACAC249F0289000C9B35 /* UseCasesFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98BACAB249F0289000C9B35 /* UseCasesFactory.swift */; };
 		A9912BCF249DADB900AB3204 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9E75753249D242300D339C4 /* Data.framework */; };
 		A9912BD1249DBCC000AB3204 /* AlamofireAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9912BD0249DBCC000AB3204 /* AlamofireAdapter.swift */; };
 		A9912BD3249DBE8400AB3204 /* UrlProtocolStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9912BD2249DBE8400AB3204 /* UrlProtocolStub.swift */; };
@@ -46,7 +47,7 @@
 		A9A2B726249EDBA00017E2FA /* Presentation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A93F3D76249E89DE00FB9619 /* Presentation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A9A2B729249EDBA00017E2FA /* UI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A93F3DAB249EB48300FB9619 /* UI.framework */; };
 		A9A2B72A249EDBA00017E2FA /* UI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A93F3DAB249EB48300FB9619 /* UI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		A9A2B731249EDFC80017E2FA /* SignUpFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A2B730249EDFC80017E2FA /* SignUpFactory.swift */; };
+		A9A2B731249EDFC80017E2FA /* ControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A2B730249EDFC80017E2FA /* ControllerFactory.swift */; };
 		A9A2B733249EE1300017E2FA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A2B732249EE1300017E2FA /* Constants.swift */; };
 		A9A2B73A249EEE280017E2FA /* ExtensionUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A2B739249EEE280017E2FA /* ExtensionUIView.swift */; };
 		A9A2B73C249EEF9B0017E2FA /* ExtensionUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A2B73B249EEF9B0017E2FA /* ExtensionUIColor.swift */; };
@@ -248,6 +249,7 @@
 		A93F3DB8249EB48300FB9619 /* UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITests.swift; sourceTree = "<group>"; };
 		A93F3DBA249EB48300FB9619 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A93F3DC2249EB89400FB9619 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		A98BACAB249F0289000C9B35 /* UseCasesFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCasesFactory.swift; sourceTree = "<group>"; };
 		A9912BD0249DBCC000AB3204 /* AlamofireAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireAdapter.swift; sourceTree = "<group>"; };
 		A9912BD2249DBE8400AB3204 /* UrlProtocolStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlProtocolStub.swift; sourceTree = "<group>"; };
 		A9912BD9249DCA9600AB3204 /* IntegrationTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IntegrationTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -262,7 +264,7 @@
 		A9A2B710249EDA890017E2FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A9A2B713249EDA890017E2FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A9A2B715249EDA890017E2FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A9A2B730249EDFC80017E2FA /* SignUpFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpFactory.swift; sourceTree = "<group>"; };
+		A9A2B730249EDFC80017E2FA /* ControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerFactory.swift; sourceTree = "<group>"; };
 		A9A2B732249EE1300017E2FA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A9A2B739249EEE280017E2FA /* ExtensionUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIView.swift; sourceTree = "<group>"; };
 		A9A2B73B249EEF9B0017E2FA /* ExtensionUIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIColor.swift; sourceTree = "<group>"; };
@@ -547,7 +549,8 @@
 		A9A2B72F249EDFB50017E2FA /* Factories */ = {
 			isa = PBXGroup;
 			children = (
-				A9A2B730249EDFC80017E2FA /* SignUpFactory.swift */,
+				A9A2B730249EDFC80017E2FA /* ControllerFactory.swift */,
+				A98BACAB249F0289000C9B35 /* UseCasesFactory.swift */,
 			);
 			path = Factories;
 			sourceTree = "<group>";
@@ -1180,7 +1183,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9A2B708249EDA860017E2FA /* AppDelegate.swift in Sources */,
-				A9A2B731249EDFC80017E2FA /* SignUpFactory.swift in Sources */,
+				A98BACAC249F0289000C9B35 /* UseCasesFactory.swift in Sources */,
+				A9A2B731249EDFC80017E2FA /* ControllerFactory.swift in Sources */,
 				A9A2B70A249EDA860017E2FA /* SceneDelegate.swift in Sources */,
 				A9A2B733249EE1300017E2FA /* Constants.swift in Sources */,
 			);
