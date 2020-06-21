@@ -1,0 +1,13 @@
+//
+//  Debug.xcconfig
+//  CleanArchitecture
+//
+//  Created by Jean Paull on 21/06/20.
+//  Copyright © 2020 Jean Paull. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+
+API_BASE_URL = https:/$()/localhost.com/api/

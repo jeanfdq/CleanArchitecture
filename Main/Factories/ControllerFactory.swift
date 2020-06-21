@@ -15,7 +15,7 @@ import Domain
 
 class ControllerFactory {
     static func makeSignUp(addAccount: AddAccount) -> SignUpViewController {
-        
+    
         let controller = SignUpViewController()
         let presenter = SingUpPresenter(alertView: controller, emailValidator: controller, addAccount: addAccount, loadingView: controller)
         controller.signUp = presenter.singUp

@@ -9,5 +9,9 @@
 import Foundation
 
 public enum HttpUrls {
-    static let urlAddAccount = "https://clean-node-api.herokuapp.com/api/signup"
+    static let urlAddAccount =  Environment.variable(key: .apiBaseURL) + "signup"
+}
+
+public enum EnvironmentVariables : String {
+    case apiBaseURL = "API_BASE_URL"
 }

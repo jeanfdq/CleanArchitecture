@@ -23,6 +23,7 @@
 		A93F3DB9249EB48300FB9619 /* UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93F3DB8249EB48300FB9619 /* UITests.swift */; };
 		A93F3DC3249EB89400FB9619 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93F3DC2249EB89400FB9619 /* SignUpViewController.swift */; };
 		A98BACAC249F0289000C9B35 /* UseCasesFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98BACAB249F0289000C9B35 /* UseCasesFactory.swift */; };
+		A98BACB1249F11E9000C9B35 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98BACB0249F11E9000C9B35 /* Environment.swift */; };
 		A9912BCF249DADB900AB3204 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9E75753249D242300D339C4 /* Data.framework */; };
 		A9912BD1249DBCC000AB3204 /* AlamofireAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9912BD0249DBCC000AB3204 /* AlamofireAdapter.swift */; };
 		A9912BD3249DBE8400AB3204 /* UrlProtocolStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9912BD2249DBE8400AB3204 /* UrlProtocolStub.swift */; };
@@ -250,6 +251,9 @@
 		A93F3DBA249EB48300FB9619 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A93F3DC2249EB89400FB9619 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		A98BACAB249F0289000C9B35 /* UseCasesFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCasesFactory.swift; sourceTree = "<group>"; };
+		A98BACAE249F0F19000C9B35 /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
+		A98BACAF249F0F70000C9B35 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		A98BACB0249F11E9000C9B35 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		A9912BD0249DBCC000AB3204 /* AlamofireAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireAdapter.swift; sourceTree = "<group>"; };
 		A9912BD2249DBE8400AB3204 /* UrlProtocolStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlProtocolStub.swift; sourceTree = "<group>"; };
 		A9912BD9249DCA9600AB3204 /* IntegrationTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IntegrationTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -479,6 +483,24 @@
 			path = UITests;
 			sourceTree = "<group>";
 		};
+		A98BACAD249F0F00000C9B35 /* LauchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				A9A2B712249EDA890017E2FA /* LaunchScreen.storyboard */,
+			);
+			path = LauchScreen;
+			sourceTree = "<group>";
+		};
+		A98BACB2249F13B5000C9B35 /* EnvironmentVariables */ = {
+			isa = PBXGroup;
+			children = (
+				A98BACAE249F0F19000C9B35 /* Development.xcconfig */,
+				A98BACAF249F0F70000C9B35 /* Release.xcconfig */,
+				A98BACB0249F11E9000C9B35 /* Environment.swift */,
+			);
+			path = EnvironmentVariables;
+			sourceTree = "<group>";
+		};
 		A9912BCE249DACBB00AB3204 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -527,12 +549,13 @@
 		A9A2B706249EDA860017E2FA /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				A9A2B72F249EDFB50017E2FA /* Factories */,
 				A9A2B72E249EDBBB0017E2FA /* System Delegates */,
-				A9A2B710249EDA890017E2FA /* Assets.xcassets */,
-				A9A2B712249EDA890017E2FA /* LaunchScreen.storyboard */,
-				A9A2B715249EDA890017E2FA /* Info.plist */,
+				A98BACB2249F13B5000C9B35 /* EnvironmentVariables */,
 				A9A2B736249EED4B0017E2FA /* Helper */,
+				A9A2B72F249EDFB50017E2FA /* Factories */,
+				A98BACAD249F0F00000C9B35 /* LauchScreen */,
+				A9A2B710249EDA890017E2FA /* Assets.xcassets */,
+				A9A2B715249EDA890017E2FA /* Info.plist */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -1183,6 +1206,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9A2B708249EDA860017E2FA /* AppDelegate.swift in Sources */,
+				A98BACB1249F11E9000C9B35 /* Environment.swift in Sources */,
 				A98BACAC249F0289000C9B35 /* UseCasesFactory.swift in Sources */,
 				A9A2B731249EDFC80017E2FA /* ControllerFactory.swift in Sources */,
 				A9A2B70A249EDA860017E2FA /* SceneDelegate.swift in Sources */,
@@ -1582,6 +1606,7 @@
 		};
 		A9A2B717249EDA890017E2FA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A98BACAE249F0F19000C9B35 /* Development.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -1599,6 +1624,7 @@
 		};
 		A9A2B718249EDA890017E2FA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A98BACAF249F0F70000C9B35 /* Release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

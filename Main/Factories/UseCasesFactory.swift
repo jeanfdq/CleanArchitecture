@@ -12,9 +12,11 @@ import Infra
 import Domain
 
 class UseCases{
+    
+    private static let httpClient = AlamofireAdapter()
+    
     static func makeRemoteAddAccount() -> AddAccount {
         let url = URL(string: HttpUrls.urlAddAccount)!
-        let alamofireAdapter = AlamofireAdapter()
-        return RemoteAddAccount(url: url, httpPostClient: alamofireAdapter)
+        return RemoteAddAccount(url: url, httpPostClient: httpClient)
     }
 }
