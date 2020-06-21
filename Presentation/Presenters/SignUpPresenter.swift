@@ -23,7 +23,7 @@ public final class SingUpPresenter {
         self.loadingView    = loadingView
     }
     
-    public func SingUp(viewModel:SignUpViewModel){
+    public func singUp(viewModel:SignUpViewModel){
         
         loadingView.display(loadingViewModel: LoadingViewModel(isLoading: true))
         
