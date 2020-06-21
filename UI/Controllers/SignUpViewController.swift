@@ -13,6 +13,7 @@ public class SignUpViewController: UIViewController {
 
     //MARK: - Attributes
    public var signUp: ((SignUpViewModel)->Void)?
+    public var singUpViewModel:SignUpViewModel?
     
     lazy var stackField:UIStackView = {
         let stack = UIStackView(arrangedSubviews: [nameTextField, emailTextField, passwordTextField, passwordCfmTextField,btnAddAccount])
@@ -85,12 +86,9 @@ public class SignUpViewController: UIViewController {
         super.viewDidLoad()
         
         setupView()
-        
         inputUI()
         
-        
     }
-    
 
     //MARK: - Functions
     
@@ -108,7 +106,9 @@ public class SignUpViewController: UIViewController {
     
     @objc private func addAccount(){
         
-        signUp?(SignUpViewModel(name:nameTextField.text, email:emailTextField.text, password:passwordTextField.text, passwordConfirmation:passwordCfmTextField.text))
+        singUpViewModel = SignUpViewModel(name:nameTextField.text, email:emailTextField.text, password:passwordTextField.text, passwordConfirmation:passwordCfmTextField.text)
+        
+        signUp?(singUpViewModel!)
     }
 }
 
@@ -136,11 +136,11 @@ extension SignUpViewController:AlertView {
     
 }
 
-extension SignUpViewController:EmailValidator {
-    
-    public func isValid(email: String) -> Bool {
-        return email.isEmailValid()
-    }
-    
-    
-}
+//extension SignUpViewController:EmailValidator {
+//    
+//    public func isValid(email: String) -> Bool {
+//        return email.isEmailValid()
+//    }
+//    
+//    
+//}

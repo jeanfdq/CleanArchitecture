@@ -12,11 +12,12 @@ import Domain
 public final class SingUpPresenter {
     
     private let alertView:AlertView
-    private let emailValidator:EmailValidator
+    private let emailValidator:ValidEmail
     private let addAccount:AddAccount
     private let loadingView:LoadingView
     
-    public init(alertView:AlertView, emailValidator:EmailValidator, addAccount:AddAccount, loadingView:LoadingView) {
+    public init(alertView:AlertView, emailValidator:ValidEmail, addAccount:AddAccount, loadingView:LoadingView) {
+        
         self.alertView      = alertView
         self.emailValidator = emailValidator
         self.addAccount     = addAccount
@@ -31,21 +32,26 @@ public final class SingUpPresenter {
             
             alertView.showMessage(viewModel: AlertViewModel(title: "Falha na validação", message: message))
             loadingView.display(loadingViewModel: LoadingViewModel(isLoading: false))
+            
         }else {
+            
             
             guard let addAccountModel = viewModel.toAddAccountModel() else {return}
             
             addAccount.add(addAccountModel: addAccountModel) { [weak self] result in
                 
-                switch result {
+                DispatchQueue.main.async { [weak self] in
                     
-                    case .failure: self?.alertView.showMessage(viewModel: AlertViewModel(title: "Erro", message: "Algo deu errado ao adicionar a conta."))
+                    switch result {
+                        
+                        case .failure: self?.alertView.showMessage(viewModel: AlertViewModel(title: "Erro", message: "Algo deu errado ao adicionar a conta."))
+                        
+                        case .success: self?.alertView.showMessage(viewModel: AlertViewModel(title: "Account", message: "Conta criada com sucesso."))
+                        
+                    }
                     
-                    case .success: self?.alertView.showMessage(viewModel: AlertViewModel(title: "Account", message: "Conta criada com sucesso."))
-                    
+                    self?.loadingView.display(loadingViewModel: LoadingViewModel(isLoading: false))
                 }
-                
-                self?.loadingView.display(loadingViewModel: LoadingViewModel(isLoading: false))
                 
             }
         }
@@ -63,7 +69,7 @@ public final class SingUpPresenter {
         
         if viewModel.email == nil || viewModel.email!.isEmpty {
             message = "O campo e-mail deve ser obrigatório."
-        }else if !emailValidator.isValid(email: viewModel.email!) {
+        }else if !emailValidator.validEmailDomain(email: viewModel.email!) {
             message = "E-mail imformado inválido."
         }
         

@@ -8,6 +8,6 @@
 
 import Foundation
 
-public protocol EmailValidator {
-    func isValid(email:String) -> Bool
+public protocol EmailValidatorData {
+    func isValid(email:String?) -> Bool
 }

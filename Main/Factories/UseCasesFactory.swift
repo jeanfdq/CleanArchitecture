@@ -17,6 +17,19 @@ class UseCases{
     
     static func makeRemoteAddAccount() -> AddAccount {
         let url = URL(string: HttpUrls.urlAddAccount)!
-        return RemoteAddAccount(url: url, httpPostClient: httpClient)
+        let remoteAddAccount = RemoteAddAccount(url: url, httpPostClient: httpClient)
+        
+        return MainQueueDecorator(remoteAddAccount) //Feito isso para aplicar o design pattern DEcorator para colocar o processo todo na Main Thread
     }
+    
+    
+    private static let emailValidator = EmailValidatorAdapter()
+    
+    static func makeRemoteEmailValidator(email:String?) -> ValidEmail {
+        return RemoteEmailValidator(email: email, emailValidator: emailValidator)
+    }
+    
 }
+
+
+

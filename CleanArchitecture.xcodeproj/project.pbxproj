@@ -16,7 +16,6 @@
 		A93F3D90249E936E00FB9619 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A9E7573F249D209800D339C4 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A93F3D96249E93AE00FB9619 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93F3D95249E93AE00FB9619 /* SignUpViewModel.swift */; };
 		A93F3D99249E949A00FB9619 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93F3D98249E949A00FB9619 /* AlertView.swift */; };
-		A93F3D9C249E975200FB9619 /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93F3D9B249E975200FB9619 /* EmailValidator.swift */; };
 		A93F3DA1249EA6CA00FB9619 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93F3DA0249EA6CA00FB9619 /* LoadingView.swift */; };
 		A93F3DA3249EAF4200FB9619 /* ExtensionSignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93F3DA2249EAF4200FB9619 /* ExtensionSignUpViewModel.swift */; };
 		A93F3DB4249EB48300FB9619 /* UI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A93F3DAB249EB48300FB9619 /* UI.framework */; };
@@ -52,6 +51,15 @@
 		A9A2B733249EE1300017E2FA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A2B732249EE1300017E2FA /* Constants.swift */; };
 		A9A2B73A249EEE280017E2FA /* ExtensionUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A2B739249EEE280017E2FA /* ExtensionUIView.swift */; };
 		A9A2B73C249EEF9B0017E2FA /* ExtensionUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A2B73B249EEF9B0017E2FA /* ExtensionUIColor.swift */; };
+		A9A64F23249F1D4500B83DD1 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98BACB0249F11E9000C9B35 /* Environment.swift */; };
+		A9A64F24249F1D6C00B83DD1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A2B732249EE1300017E2FA /* Constants.swift */; };
+		A9A64F27249F262500B83DD1 /* MainQueueDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A64F26249F262500B83DD1 /* MainQueueDecorator.swift */; };
+		A9A64F2A249F26BC00B83DD1 /* DecoratorRemoteAddAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A64F29249F26BC00B83DD1 /* DecoratorRemoteAddAccount.swift */; };
+		A9A64F2D249F325900B83DD1 /* EmailValidatorAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A64F2C249F325900B83DD1 /* EmailValidatorAdapter.swift */; };
+		A9A64F30249F3CA100B83DD1 /* RemoteEmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A64F2F249F3CA100B83DD1 /* RemoteEmailValidator.swift */; };
+		A9A64F33249F3D6D00B83DD1 /* EmailValidatorData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93F3D9B249E975200FB9619 /* EmailValidatorData.swift */; };
+		A9A64F35249F3DE600B83DD1 /* ValidEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A64F34249F3DE600B83DD1 /* ValidEmail.swift */; };
+		A9A64F39249F4A0100B83DD1 /* EmailValidator in Frameworks */ = {isa = PBXBuildFile; productRef = A9A64F38249F4A0100B83DD1 /* EmailValidator */; };
 		A9E75748249D211600D339C4 /* AddAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E75747249D211600D339C4 /* AddAccount.swift */; };
 		A9E7574B249D234300D339C4 /* AccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E7574A249D234300D339C4 /* AccountModel.swift */; };
 		A9E7574D249D236B00D339C4 /* AddAccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E7574C249D236B00D339C4 /* AddAccountModel.swift */; };
@@ -241,7 +249,7 @@
 		A93F3D8D249E931E00FB9619 /* SignUpPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresenter.swift; sourceTree = "<group>"; };
 		A93F3D95249E93AE00FB9619 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		A93F3D98249E949A00FB9619 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
-		A93F3D9B249E975200FB9619 /* EmailValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
+		A93F3D9B249E975200FB9619 /* EmailValidatorData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidatorData.swift; sourceTree = "<group>"; };
 		A93F3DA0249EA6CA00FB9619 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		A93F3DA2249EAF4200FB9619 /* ExtensionSignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionSignUpViewModel.swift; sourceTree = "<group>"; };
 		A93F3DAB249EB48300FB9619 /* UI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -272,6 +280,11 @@
 		A9A2B732249EE1300017E2FA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A9A2B739249EEE280017E2FA /* ExtensionUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIView.swift; sourceTree = "<group>"; };
 		A9A2B73B249EEF9B0017E2FA /* ExtensionUIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIColor.swift; sourceTree = "<group>"; };
+		A9A64F26249F262500B83DD1 /* MainQueueDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainQueueDecorator.swift; sourceTree = "<group>"; };
+		A9A64F29249F26BC00B83DD1 /* DecoratorRemoteAddAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecoratorRemoteAddAccount.swift; sourceTree = "<group>"; };
+		A9A64F2C249F325900B83DD1 /* EmailValidatorAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidatorAdapter.swift; sourceTree = "<group>"; };
+		A9A64F2F249F3CA100B83DD1 /* RemoteEmailValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteEmailValidator.swift; sourceTree = "<group>"; };
+		A9A64F34249F3DE600B83DD1 /* ValidEmail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidEmail.swift; sourceTree = "<group>"; };
 		A9E7573F249D209800D339C4 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9E75742249D209800D339C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9E75747249D211600D339C4 /* AddAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAccount.swift; sourceTree = "<group>"; };
@@ -377,6 +390,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9912BCF249DADB900AB3204 /* Data.framework in Frameworks */,
+				A9A64F39249F4A0100B83DD1 /* EmailValidator in Frameworks */,
 				A9E7579F249D948900D339C4 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -442,7 +456,6 @@
 		A93F3D9D249E978000FB9619 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				A93F3D9B249E975200FB9619 /* EmailValidator.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -551,6 +564,7 @@
 			children = (
 				A9A2B72E249EDBBB0017E2FA /* System Delegates */,
 				A98BACB2249F13B5000C9B35 /* EnvironmentVariables */,
+				A9A64F25249F25FC00B83DD1 /* Decorator */,
 				A9A2B736249EED4B0017E2FA /* Helper */,
 				A9A2B72F249EDFB50017E2FA /* Factories */,
 				A98BACAD249F0F00000C9B35 /* LauchScreen */,
@@ -584,6 +598,23 @@
 				A9A2B732249EE1300017E2FA /* Constants.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		A9A64F25249F25FC00B83DD1 /* Decorator */ = {
+			isa = PBXGroup;
+			children = (
+				A9A64F28249F264700B83DD1 /* Extensions */,
+				A9A64F26249F262500B83DD1 /* MainQueueDecorator.swift */,
+			);
+			path = Decorator;
+			sourceTree = "<group>";
+		};
+		A9A64F28249F264700B83DD1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A9A64F29249F26BC00B83DD1 /* DecoratorRemoteAddAccount.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		A9E7571A249D1F4B00D339C4 = {
@@ -650,6 +681,7 @@
 				A9E75770249D434000D339C4 /* Protocols */,
 				A9E7577D249D504400D339C4 /* Errors */,
 				A9E75773249D43D300D339C4 /* RemoteAddAccount.swift */,
+				A9A64F2F249F3CA100B83DD1 /* RemoteEmailValidator.swift */,
 				A9E75756249D242300D339C4 /* Info.plist */,
 			);
 			path = Data;
@@ -676,6 +708,7 @@
 			isa = PBXGroup;
 			children = (
 				A9E75771249D436100D339C4 /* HttpPostClient.swift */,
+				A93F3D9B249E975200FB9619 /* EmailValidatorData.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -700,6 +733,7 @@
 			isa = PBXGroup;
 			children = (
 				A9E75747249D211600D339C4 /* AddAccount.swift */,
+				A9A64F34249F3DE600B83DD1 /* ValidEmail.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -710,6 +744,7 @@
 				A93F3DA5249EB3AC00FB9619 /* Helper */,
 				A9912BD0249DBCC000AB3204 /* AlamofireAdapter.swift */,
 				A9E75789249D930600D339C4 /* Info.plist */,
+				A9A64F2C249F325900B83DD1 /* EmailValidatorAdapter.swift */,
 			);
 			path = Infra;
 			sourceTree = "<group>";
@@ -964,6 +999,7 @@
 			name = Infra;
 			packageProductDependencies = (
 				A9E7579E249D948900D339C4 /* Alamofire */,
+				A9A64F38249F4A0100B83DD1 /* EmailValidator */,
 			);
 			productName = Infra;
 			productReference = A9E75786249D930600D339C4 /* Infra.framework */;
@@ -1048,6 +1084,7 @@
 			mainGroup = A9E7571A249D1F4B00D339C4;
 			packageReferences = (
 				A9E7579D249D948900D339C4 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				A9A64F37249F4A0100B83DD1 /* XCRemoteSwiftPackageReference "EmailValidator" */,
 			);
 			productRefGroup = A9E75724249D1F4B00D339C4 /* Products */;
 			projectDirPath = "";
@@ -1156,11 +1193,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A93F3D96249E93AE00FB9619 /* SignUpViewModel.swift in Sources */,
-				A93F3D9C249E975200FB9619 /* EmailValidator.swift in Sources */,
 				A93F3D8E249E931E00FB9619 /* SignUpPresenter.swift in Sources */,
+				A9A64F23249F1D4500B83DD1 /* Environment.swift in Sources */,
 				A93F3D99249E949A00FB9619 /* AlertView.swift in Sources */,
 				A93F3DA3249EAF4200FB9619 /* ExtensionSignUpViewModel.swift in Sources */,
 				A93F3DA1249EA6CA00FB9619 /* LoadingView.swift in Sources */,
+				A9A64F24249F1D6C00B83DD1 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1210,7 +1248,9 @@
 				A98BACAC249F0289000C9B35 /* UseCasesFactory.swift in Sources */,
 				A9A2B731249EDFC80017E2FA /* ControllerFactory.swift in Sources */,
 				A9A2B70A249EDA860017E2FA /* SceneDelegate.swift in Sources */,
+				A9A64F27249F262500B83DD1 /* MainQueueDecorator.swift in Sources */,
 				A9A2B733249EE1300017E2FA /* Constants.swift in Sources */,
+				A9A64F2A249F26BC00B83DD1 /* DecoratorRemoteAddAccount.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1222,6 +1262,7 @@
 				A9E75748249D211600D339C4 /* AddAccount.swift in Sources */,
 				A9E75777249D44BA00D339C4 /* ExtensionEncodable.swift in Sources */,
 				A9E75780249D5B7300D339C4 /* ExtensionData.swift in Sources */,
+				A9A64F35249F3DE600B83DD1 /* ValidEmail.swift in Sources */,
 				A9E7574B249D234300D339C4 /* AccountModel.swift in Sources */,
 				A9E7574D249D236B00D339C4 /* AddAccountModel.swift in Sources */,
 			);
@@ -1233,7 +1274,9 @@
 			files = (
 				A9E75772249D436100D339C4 /* HttpPostClient.swift in Sources */,
 				A9E7577C249D502900D339C4 /* HttpError.swift in Sources */,
+				A9A64F33249F3D6D00B83DD1 /* EmailValidatorData.swift in Sources */,
 				A9E75774249D43D300D339C4 /* RemoteAddAccount.swift in Sources */,
+				A9A64F30249F3CA100B83DD1 /* RemoteEmailValidator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1252,6 +1295,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9912BD1249DBCC000AB3204 /* AlamofireAdapter.swift in Sources */,
+				A9A64F2D249F325900B83DD1 /* EmailValidatorAdapter.swift in Sources */,
 				A9912BD3249DBE8400AB3204 /* UrlProtocolStub.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2135,6 +2179,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		A9A64F37249F4A0100B83DD1 /* XCRemoteSwiftPackageReference "EmailValidator" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/evanrobertson/EmailValidator.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.3;
+			};
+		};
 		A9E7579D249D948900D339C4 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -2146,6 +2198,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		A9A64F38249F4A0100B83DD1 /* EmailValidator */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A9A64F37249F4A0100B83DD1 /* XCRemoteSwiftPackageReference "EmailValidator" */;
+			productName = EmailValidator;
+		};
 		A9E7579E249D948900D339C4 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = A9E7579D249D948900D339C4 /* XCRemoteSwiftPackageReference "Alamofire" */;

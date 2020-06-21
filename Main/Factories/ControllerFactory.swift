@@ -17,7 +17,9 @@ class ControllerFactory {
     static func makeSignUp(addAccount: AddAccount) -> SignUpViewController {
     
         let controller = SignUpViewController()
-        let presenter = SingUpPresenter(alertView: controller, emailValidator: controller, addAccount: addAccount, loadingView: controller)
+        let emailValid = UseCases.makeRemoteEmailValidator(email: controller.singUpViewModel?.email)
+        let presenter = SingUpPresenter(alertView: controller, emailValidator: emailValid, addAccount: addAccount, loadingView: controller)
+        
         controller.signUp = presenter.singUp
         return controller
     }
