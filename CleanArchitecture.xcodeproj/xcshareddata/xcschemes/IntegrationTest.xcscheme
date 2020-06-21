@@ -33,11 +33,6 @@
                BlueprintName = "IntegrationTest"
                ReferencedContainer = "container:CleanArchitecture.xcodeproj">
             </BuildableReference>
-            <SkippedTests>
-               <Test
-                  Identifier = "IntegrationTest/test_AddAccount_with_failure()">
-               </Test>
-            </SkippedTests>
          </TestableReference>
       </Testables>
    </TestAction>

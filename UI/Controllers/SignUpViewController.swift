@@ -14,27 +14,52 @@ public class SignUpViewController: UIViewController {
     //MARK: - Attributes
    public var signUp: ((SignUpViewModel)->Void)?
     
-    let nameTextField:UITextField = {
+    lazy var stackField:UIStackView = {
+        let stack = UIStackView(arrangedSubviews: [nameTextField, emailTextField, passwordTextField, passwordCfmTextField,btnAddAccount])
+        stack.axis = .vertical
+        stack.distribution = .equalCentering
+        stack.spacing = 10
+        return stack
+    }()
+    
+    lazy var nameTextField:UITextField = {
         let txf = UITextField()
         txf.placeholder = "Nome: "
+        txf.makeConerRadius(corner: 8)
+        txf.makeBorder(borderWidth: 0.5, color: .lightGray)
+        txf.backgroundColor = .white
         return txf
     }()
     
     let emailTextField:UITextField = {
         let txf = UITextField()
         txf.placeholder = "E-mail: "
+        txf.makeConerRadius(corner: 8)
+        txf.makeBorder(borderWidth: 0.5, color: .lightGray)
+        txf.backgroundColor = .white
+        txf.keyboardType = .emailAddress
         return txf
     }()
     
     let passwordTextField:UITextField = {
         let txf = UITextField()
         txf.placeholder = "Senha: "
+        txf.makeConerRadius(corner: 8)
+        txf.makeBorder(borderWidth: 0.5, color: .lightGray)
+        txf.backgroundColor = .white
+        txf.keyboardType = .numberPad
+        txf.isSecureTextEntry = true
         return txf
     }()
     
     let passwordCfmTextField:UITextField = {
         let txf = UITextField()
         txf.placeholder = "Confirme sua senha : "
+        txf.makeConerRadius(corner: 8)
+        txf.makeBorder(borderWidth: 0.5, color: .lightGray)
+        txf.backgroundColor = .white
+        txf.keyboardType = .numberPad
+        txf.isSecureTextEntry = true
         return txf
     }()
     
@@ -47,6 +72,9 @@ public class SignUpViewController: UIViewController {
     
     lazy var btnAddAccount:UIButton = {
         let btn = UIButton(type: .custom)
+        btn.setTitle("Salvar", for: .normal)
+        btn.backgroundColor = .blue
+        btn.frame.size = .init(width: view.frame.width * 0.5, height: 55)
         btn.addTarget(self, action: #selector(self.addAccount), for: .touchUpInside)
         return btn
     }()
@@ -55,13 +83,30 @@ public class SignUpViewController: UIViewController {
     //MARK: - Life Cycles
     public override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .cyan
+        
+        setupView()
+        
+        inputUI()
     }
     
+
     //MARK: - Functions
+    
+    fileprivate func setupView() {
+        self.view.backgroundColor = .systemBackground
+        self.dismissKeyboard()
+    }
+    
+    fileprivate func inputUI() {
+        view.addSubview(stackField)
+        stackField.applyCenterIntoSuperView()
+        view.addSubview(loading)
+        loading.applyCenterIntoSuperView()
+    }
+    
     @objc private func addAccount(){
         
-        signUp?(SignUpViewModel(name:nil, email:nil, password:nil, passwordConfirmation:nil))
+        signUp?(SignUpViewModel(name:nameTextField.text, email:emailTextField.text, password:passwordTextField.text, passwordConfirmation:passwordCfmTextField.text))
     }
 }
 

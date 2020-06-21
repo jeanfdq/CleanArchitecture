@@ -30,7 +30,7 @@ public final class SingUpPresenter {
         if let message = validate(viewModel: viewModel) {
             
             alertView.showMessage(viewModel: AlertViewModel(title: "Falha na validação", message: message))
-            
+            loadingView.display(loadingViewModel: LoadingViewModel(isLoading: false))
         }else {
             
             guard let addAccountModel = viewModel.toAddAccountModel() else {return}
@@ -72,7 +72,7 @@ public final class SingUpPresenter {
         }
         
         if viewModel.passwordConfirmation == nil || viewModel.passwordConfirmation!.isEmpty {
-            message = "O campo de copnfirmação da senha deve ser obrigatório."
+            message = "O campo de confirmação da senha deve ser obrigatório."
         }
         
         if viewModel.password != nil && !viewModel.password!.isEmpty && viewModel.passwordConfirmation != nil && !viewModel.passwordConfirmation!.isEmpty && viewModel.password !=  viewModel.passwordConfirmation {

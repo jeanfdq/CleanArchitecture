@@ -48,6 +48,8 @@
 		A9A2B72A249EDBA00017E2FA /* UI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A93F3DAB249EB48300FB9619 /* UI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A9A2B731249EDFC80017E2FA /* SignUpFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A2B730249EDFC80017E2FA /* SignUpFactory.swift */; };
 		A9A2B733249EE1300017E2FA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A2B732249EE1300017E2FA /* Constants.swift */; };
+		A9A2B73A249EEE280017E2FA /* ExtensionUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A2B739249EEE280017E2FA /* ExtensionUIView.swift */; };
+		A9A2B73C249EEF9B0017E2FA /* ExtensionUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A2B73B249EEF9B0017E2FA /* ExtensionUIColor.swift */; };
 		A9E75748249D211600D339C4 /* AddAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E75747249D211600D339C4 /* AddAccount.swift */; };
 		A9E7574B249D234300D339C4 /* AccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E7574A249D234300D339C4 /* AccountModel.swift */; };
 		A9E7574D249D236B00D339C4 /* AddAccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E7574C249D236B00D339C4 /* AddAccountModel.swift */; };
@@ -262,6 +264,8 @@
 		A9A2B715249EDA890017E2FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9A2B730249EDFC80017E2FA /* SignUpFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpFactory.swift; sourceTree = "<group>"; };
 		A9A2B732249EE1300017E2FA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		A9A2B739249EEE280017E2FA /* ExtensionUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIView.swift; sourceTree = "<group>"; };
+		A9A2B73B249EEF9B0017E2FA /* ExtensionUIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIColor.swift; sourceTree = "<group>"; };
 		A9E7573F249D209800D339C4 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9E75742249D209800D339C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9E75747249D211600D339C4 /* AddAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAccount.swift; sourceTree = "<group>"; };
@@ -512,6 +516,8 @@
 			children = (
 				A9A2B6FD249ECD930017E2FA /* ExtensionUIViewController.swift */,
 				A9A2B6FF249ED4450017E2FA /* ExtensionString.swift */,
+				A9A2B739249EEE280017E2FA /* ExtensionUIView.swift */,
+				A9A2B73B249EEF9B0017E2FA /* ExtensionUIColor.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -524,7 +530,7 @@
 				A9A2B710249EDA890017E2FA /* Assets.xcassets */,
 				A9A2B712249EDA890017E2FA /* LaunchScreen.storyboard */,
 				A9A2B715249EDA890017E2FA /* Info.plist */,
-				A9A2B732249EE1300017E2FA /* Constants.swift */,
+				A9A2B736249EED4B0017E2FA /* Helper */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -544,6 +550,14 @@
 				A9A2B730249EDFC80017E2FA /* SignUpFactory.swift */,
 			);
 			path = Factories;
+			sourceTree = "<group>";
+		};
+		A9A2B736249EED4B0017E2FA /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				A9A2B732249EE1300017E2FA /* Constants.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		A9E7571A249D1F4B00D339C4 = {
@@ -1014,15 +1028,15 @@
 			projectRoot = "";
 			targets = (
 				A9A2B704249EDA860017E2FA /* Main */,
+				A93F3DAA249EB48300FB9619 /* UI */,
+				A93F3D75249E89DE00FB9619 /* Presentation */,
 				A9E7573E249D209800D339C4 /* Domain */,
 				A9E75752249D242300D339C4 /* Data */,
-				A9E7575A249D242300D339C4 /* DataTests */,
 				A9E75785249D930600D339C4 /* Infra */,
+				A9E7575A249D242300D339C4 /* DataTests */,
 				A9E7578D249D930600D339C4 /* InfraTests */,
 				A9912BD8249DCA9600AB3204 /* IntegrationTest */,
-				A93F3D75249E89DE00FB9619 /* Presentation */,
 				A93F3D7D249E89DE00FB9619 /* PresentationTests */,
-				A93F3DAA249EB48300FB9619 /* UI */,
 				A93F3DB2249EB48300FB9619 /* UITests */,
 			);
 		};
@@ -1137,7 +1151,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9A2B6FE249ECD930017E2FA /* ExtensionUIViewController.swift in Sources */,
+				A9A2B73A249EEE280017E2FA /* ExtensionUIView.swift in Sources */,
 				A93F3DC3249EB89400FB9619 /* SignUpViewController.swift in Sources */,
+				A9A2B73C249EEF9B0017E2FA /* ExtensionUIColor.swift in Sources */,
 				A9A2B700249ED4450017E2FA /* ExtensionString.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1535,6 +1551,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = br.jean.IntegrationTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -1554,6 +1571,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = br.jean.IntegrationTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
