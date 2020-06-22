@@ -13,10 +13,10 @@ public final class SingUpPresenter {
     
     private let alertView:AlertView
     private let emailValidator:ValidEmail
-    private let addAccount:AddAccount
+    private let addAccount:AddAccountProtocol
     private let loadingView:LoadingView
     
-    public init(alertView:AlertView, emailValidator:ValidEmail, addAccount:AddAccount, loadingView:LoadingView) {
+    public init(alertView:AlertView, emailValidator:ValidEmail, addAccount:AddAccountProtocol, loadingView:LoadingView) {
         
         self.alertView      = alertView
         self.emailValidator = emailValidator
@@ -24,7 +24,7 @@ public final class SingUpPresenter {
         self.loadingView    = loadingView
     }
     
-    public func singUp(viewModel:SignUpViewModel){
+    public func singUp(viewModel:SignUpRequestViewModel){
         
         loadingView.display(loadingViewModel: LoadingViewModel(isLoading: true))
         
@@ -59,10 +59,10 @@ public final class SingUpPresenter {
         
     }
     
-    private func validate(viewModel:SignUpViewModel) -> String? {
+    private func validate(viewModel:SignUpRequestViewModel) -> String? {
         
         var message:String? = nil
-        
+    
         if viewModel.name == nil || viewModel.name!.isEmpty {
             message = "O campo nome deve ser obrigatório."
         }

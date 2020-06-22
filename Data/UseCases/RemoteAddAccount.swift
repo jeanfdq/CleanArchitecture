@@ -9,7 +9,7 @@
 import Foundation
 import Domain
 
-public final class RemoteAddAccount: AddAccount {
+public final class RemoteAddAccount: AddAccountProtocol {
     
     private let url:URL
     private let httpPostClient:HttpPostClient
@@ -19,7 +19,7 @@ public final class RemoteAddAccount: AddAccount {
         self.httpPostClient = httpPostClient
     }
     
-    public func add(addAccountModel:AddAccountModel, completion:@escaping(Result<AccountModel,DomainError>)->Void) {
+    public func add(addAccountModel:AddAccountModel, completion:@escaping(AddAccountProtocol.ResultApi)->Void) {
         
         httpPostClient.post(to: url, with: addAccountModel.toData()) { [weak self] result in
             
@@ -39,9 +39,15 @@ public final class RemoteAddAccount: AddAccount {
                     completion(.failure(.unexpected))
                 }
                 
-            case .failure:
-  
-                completion(.failure(.unexpected))
+            case .failure (let error):
+                
+                if error == .badRequest{
+                    completion(.failure(.dataRequestError))
+                }else{
+                    completion(.failure(.unexpected))
+                }
+                
+                
                 
             }
             

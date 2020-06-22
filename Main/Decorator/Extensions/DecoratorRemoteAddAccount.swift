@@ -9,9 +9,9 @@
 import Foundation
 import Domain
 
-extension MainQueueDecorator:AddAccount where T: AddAccount {
+extension MainQueueDecorator:AddAccountProtocol where T: AddAccountProtocol {
     
-    public func add(addAccountModel: AddAccountModel, completion: @escaping (Result<AccountModel, DomainError>) -> Void) {
+    public func add(addAccountModel: AddAccountModel, completion: @escaping (ResultApi) -> Void) {
         
         instance.add(addAccountModel: addAccountModel) { [weak self] result in
             
@@ -21,6 +21,21 @@ extension MainQueueDecorator:AddAccount where T: AddAccount {
             
         }
         
+    }
+    
+}
+
+extension MainQueueDecorator:AuthenticationProtocol where T: AuthenticationProtocol {
+    
+    public func auth(authenticationModel: AuthenticationModel, completion: @escaping (ResultLogin) -> Void) {
+        
+        instance.auth(authenticationModel: authenticationModel) { [weak self] result in
+            
+            self?.dispatch {
+                completion(result)
+            }
+            
+        }
     }
     
 }

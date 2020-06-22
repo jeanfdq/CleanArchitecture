@@ -9,11 +9,11 @@
 import UIKit
 import Presentation
 
-public class SignUpViewController: UIViewController {
+public final class SignUpViewController: UIViewController {
 
     //MARK: - Attributes
-   public var signUp: ((SignUpViewModel)->Void)?
-    public var singUpViewModel:SignUpViewModel?
+   public var signUp: ((SignUpRequestViewModel)->Void)?
+    public var singUpViewModel:SignUpRequestViewModel?
     
     lazy var stackField:UIStackView = {
         let stack = UIStackView(arrangedSubviews: [nameTextField, emailTextField, passwordTextField, passwordCfmTextField,btnAddAccount])
@@ -106,7 +106,7 @@ public class SignUpViewController: UIViewController {
     
     @objc private func addAccount(){
         
-        singUpViewModel = SignUpViewModel(name:nameTextField.text, email:emailTextField.text, password:passwordTextField.text, passwordConfirmation:passwordCfmTextField.text)
+        singUpViewModel = SignUpRequestViewModel(name:nameTextField.text, email:emailTextField.text, password:passwordTextField.text, passwordConfirmation:passwordCfmTextField.text)
         
         signUp?(singUpViewModel!)
     }
@@ -135,12 +135,3 @@ extension SignUpViewController:AlertView {
     }
     
 }
-
-//extension SignUpViewController:EmailValidator {
-//    
-//    public func isValid(email: String) -> Bool {
-//        return email.isEmailValid()
-//    }
-//    
-//    
-//}
